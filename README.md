@@ -1,9 +1,9 @@
-jdev-go-datascience-2017
+ji-go-datascience
 ========================
 
-`jdev-go-datascience-2017` is a simple repository holding sources for the `Introduction to Go & DataScience` hands-on session of the [JDEV-2017](https://jdev2017.fr).
+`ji-go-datascience` is a simple repository holding sources for the `Introduction to Go & DataScience` hands-on session of the JI-2018.
 
-The slides are [here](https://talks.godoc.org/github.com/sbinet/jdev-go-datascience-2017/talk.slide).
+The slides are [here](https://talks.godoc.org/github.com/sbinet/ji-go-datascience/talk.slide).
 
 
 ## Bootstrapping the work environment
@@ -69,23 +69,23 @@ For this part, you'll need the following tools installed to actually retrieve th
 Without further ado:
 
 ```sh
-$ go get -u -v github.com/sbinet/jdev-go-datascience-2017/cmd/jdev-hello
-github.com/sbinet/jdev-go-datascience-2017 (download)
+$ go get -u -v github.com/sbinet/ji-go-datascience/cmd/ji-hello
+github.com/sbinet/ji-go-datascience (download)
 ```
 
 `go get` downloaded (cloned, in `git` speak) the whole
-`github.com/sbinet/jdev-go-datascience-2017` repository (under `$GOPATH/src`) and
-compiled the `jdev-hello` command.
-As the compilation was successful, it also installed the `jdev-hello`
+`github.com/sbinet/ji-go-datascience` repository (under `$GOPATH/src`) and
+compiled the `ji-hello` command.
+As the compilation was successful, it also installed the `ji-hello`
 command under `$GOPATH/bin`.
 
-The `jdev-hello` command is now available from your shell:
+The `ji-hello` command is now available from your shell:
 
 ```sh
-$ jdev-hello
-Hello JDEV-Go-DataScience-2017!
+$ ji-hello
+Hello JI-Go-DataScience!
 
-$ jdev-hello you
+$ ji-hello you
 Hello you!
 ```
 

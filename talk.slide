@@ -1,5 +1,5 @@
 Introduction to DataScience with Go
-JDEV Go DataScience Workshop, 2017-07-06
+JI Go DataScience Workshop, 2018-10-03
 
 Sébastien Binet
 CNRS/IN2P3/LPC
@@ -12,7 +12,7 @@ binet@clermont.in2p3.fr
 
 Sources and resources for this workshop are here:
 
-.link https://github.com/sbinet/jdev-go-datascience-2017
+.link https://github.com/sbinet/ji-go-datascience
 
 Extracted and adapted from:
 
@@ -132,7 +132,7 @@ The standard library of Go provides a package that deals with CSV:
 
 * Read CSV data
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/csv-io-01.go][csv-io-01.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/csv-io-01.go][csv-io-01.go]]
 
   $> go run csv-io-01.go
   [...]
@@ -145,7 +145,7 @@ The standard library of Go provides a package that deals with CSV:
   
 * Read CSV data - handling unexpected fields
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/csv-io-02.go][csv-io-02.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/csv-io-02.go][csv-io-02.go]]
 
   $> go run csv-io-02.go
   2017/07/04 23:53:12 line 17, column 0: wrong number of fields in line
@@ -153,7 +153,7 @@ The standard library of Go provides a package that deals with CSV:
 
 * Read CSV data - handling unexpected types
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/csv-io-03.go][csv-io-03.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/csv-io-03.go][csv-io-03.go]]
 
   $> go run csv-io-03.go 
   2017/07/05 00:07:11 Parsing line 5 failed, unexpected type
@@ -163,7 +163,7 @@ The standard library of Go provides a package that deals with CSV:
 
 * Write CSV data
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/csv-io-04.go][csv-io-04.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/csv-io-04.go][csv-io-04.go]]
 
   $> go run ./_code/csv-io-04.go 
   $> cat output.csv 
@@ -181,13 +181,13 @@ The standard library of Go provides a package that deals with CSV:
 - Parse `iris_multiple_mixed_types.csv`
 - Define expected types for all of the columns in the CSV file and log any errors indicating unexpected types.
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/csv-io-ex-01.go][csv-io-ex-01.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/csv-io-ex-01.go][csv-io-ex-01.go]]
 
 * CSV - exercize 2
 
 Save the parsed and cleaned `iris_multiple_mixed_types.csv` to a file called `processed.csv`.
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/csv-io-ex-02.go][csv-io-ex-02.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/csv-io-ex-02.go][csv-io-ex-02.go]]
 
 * CSV cleaning
 
@@ -200,14 +200,14 @@ The Go data science community has produced a few great packages that can help yo
 
 E.g.
 
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/csv-clean-01.go][csv-clean-01.go]]: Iterate over CSV records, reading data into a struct
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/csv-clean-02.go][csv-clean-02.go]]: Register a CSV as a table, execute SQL statements on the CSV
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/csv-clean-01.go][csv-clean-01.go]]: Iterate over CSV records, reading data into a struct
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/csv-clean-02.go][csv-clean-02.go]]: Register a CSV as a table, execute SQL statements on the CSV
 
 * Exercize
 
 Use `go-hep.org/x/hep/csvutil/csvdriver` to read `iris.csv`, sum the float values in the first four columns, and output a processed CSV file with two columns delimited by semicolons, the first having the sum value for the row and the second having the respective species.
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/csv-clean-ex-01.go][csv-clean-ex-01.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/csv-clean-ex-01.go][csv-clean-ex-01.go]]
 
 * JSON data
 
@@ -219,15 +219,15 @@ Many APIs and datastores/caches represent data in JSON, and, without a doubt, yo
 
 Support for encoding and decoding JSON data is provided by [[https://godoc.org/encoding/json][encoding/json]].
 
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/json-01.go][json-01.go]]: Unmarshal JSON data from the Citibike API
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/json-02.go][json-02.go]]: Marshal data and save a JSON file
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/json-01.go][json-01.go]]: Unmarshal JSON data from the Citibike API
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/json-02.go][json-02.go]]: Marshal data and save a JSON file
 
 * Exercize
 
 Convert the station data in from the Citibike station status API from JSON to CSV. 
 Unmarshal the station statuses from the API and save the station ID along with corresponding integer counts to a CSV file with a header.
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/json-ex-01.go][json-ex-01.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/json-ex-01.go][json-ex-01.go]]
 
 
 * Matrices & Linear Algebra
@@ -244,23 +244,23 @@ The [[https://gonum.org][Gonum]] community has created a bunch of numerical-orie
 
 E.g.:
 
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/mat-01.go][mat-01.go]]: Create and modify a matrix
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/mat-02.go][mat-02.go]]: Access values in a matrix
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/mat-03.go][mat-03.go]]: Format matrix output
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/mat-01.go][mat-01.go]]: Create and modify a matrix
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/mat-02.go][mat-02.go]]: Access values in a matrix
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/mat-03.go][mat-03.go]]: Format matrix output
 
 * Exercize
 
 Create a matrix from `diabetes.csv` using `gonum.org/v1/gonum/mat`.
 Format and output the first 10 rows to standard out.
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/mat-ex-01.go][mat-ex-01.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/mat-ex-01.go][mat-ex-01.go]]
 
 * Matrix operations
 
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/mat-04.go][mat-04.go]]: Matrix arithmetic
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/mat-05.go][mat-05.go]]: Transpose, Det, Dot Product, Inverse
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/mat-06.go][mat-06.go]]: Solve for eigenvalues/vectors
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/mat-07.go][mat-07.go]]: Vector/Matrix Norms
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/mat-04.go][mat-04.go]]: Matrix arithmetic
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/mat-05.go][mat-05.go]]: Transpose, Det, Dot Product, Inverse
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/mat-06.go][mat-06.go]]: Solve for eigenvalues/vectors
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/mat-07.go][mat-07.go]]: Vector/Matrix Norms
 
 * Exercize
 
@@ -270,41 +270,41 @@ Divide the following matrix by its norm:
       ⎢0  4  5⎥
       ⎣0  0  6⎦
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/mat-ex-02.go][mat-ex-02.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/mat-ex-02.go][mat-ex-02.go]]
 
 * Statistics and Aggregation
 
 * Summary measures
 
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/stat-01.go][stat-01.go]]: Mean, Mode
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/stat-02.go][stat-02.go]]: Min, Max, Range
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/stat-03.go][stat-03.go]]: Variance, Standard Deviation
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/stat-04.go][stat-04.go]]: Quantiles
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/stat-01.go][stat-01.go]]: Mean, Mode
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/stat-02.go][stat-02.go]]: Min, Max, Range
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/stat-03.go][stat-03.go]]: Variance, Standard Deviation
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/stat-04.go][stat-04.go]]: Quantiles
 
 * Exercize
 
 Output central tendency and statistical dispersion (or "spread") measures together for all numeric features of the iris data set.
 Looking at these measure together gives a quick snapshot of "what the data looks like" numerically.
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/stat-ex-01.go][stat-ex-01.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/stat-ex-01.go][stat-ex-01.go]]
 
 * Visualizing distributions
 
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/viz-01.go][viz-01.go]]: Histogram of a normal distribution
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/viz-02.go][viz-02.go]]: Histograms with real data
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/viz-03.go][viz-03.go]]: Box Plot with various distribution
-- [[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/viz-04.go][viz-04.go]]: Box Plots with real data
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/viz-01.go][viz-01.go]]: Histogram of a normal distribution
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/viz-02.go][viz-02.go]]: Histograms with real data
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/viz-03.go][viz-03.go]]: Box Plot with various distribution
+- [[https://github.com/sbinet/ji-go-datascience/blob/master/_code/viz-04.go][viz-04.go]]: Box Plots with real data
 
 
 * Exercizes
 
 Create a box plot of the values in the third column bmi of `diabetes.csv`.
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/viz-ex-01.go][viz-ex-01.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/viz-ex-01.go][viz-ex-01.go]]
 
 Create a histogram of the values in the third column bmi of `diabetes.csv`.
 
-[[https://github.com/sbinet/jdev-go-datascience-2017/blob/master/_code/viz-ex-02.go][viz-ex-02.go]]
+[[https://github.com/sbinet/ji-go-datascience/blob/master/_code/viz-ex-02.go][viz-ex-02.go]]
 
 * More exercizes ?
 

@@ -1,4 +1,4 @@
-// jdev-hello is a simple Hello World command to test everything is correctly setup
+// ji-hello is a simple Hello World command to test everything is correctly setup
 package main
 
 import (
@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	who := "JDEV-Go-DataScience-2017"
+	who := "JI-Go-DataScience"
 	if len(os.Args) > 1 {
 		who = os.Args[1]
 	}
